@@ -1,5 +1,5 @@
 {
-  "name": "hyperlabsx/image-meta-cleaner",
+  "name": "@hyperlabsx/image-meta-cleaner",
   "version": "1.0.0",
   "description": "Alat CLI sederhana untuk menghapus metadata EXIF dari gambar demi privasi.",
   "main": "cleaner.js",
