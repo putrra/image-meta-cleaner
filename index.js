@@ -5,10 +5,10 @@ const imagePath = process.argv[2];
 
 if (!imagePath) {
   console.log('--- Image Metadata Cleaner ---');
-  console.log('Alat CLI untuk menghapus metadata EXIF dari file JPEG.');
+  console.log('A CLI tool to remove EXIF metadata from JPEG files.');
   console.log('');
-  console.log('Cara Penggunaan:');
-  console.log('  image-cleaner <path/ke/gambar.jpg>');
+  console.log('Usage:');
+  console.log('  image-cleaner <path/to/your/image.jpg>');
   process.exit(1);
 }
 

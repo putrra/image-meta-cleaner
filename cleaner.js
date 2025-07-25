@@ -7,11 +7,11 @@ const piexif = require('piexifjs'); // Menggunakan library piexifjs
 async function cleanImage(imagePath) {
   try {
     if (!fs.existsSync(imagePath)) {
-      console.error('Error: File tidak ditemukan di path:', imagePath);
+      console.error('Error: File not found at path:', imagePath);
       return;
     }
 
-    console.log('Membaca file:', imagePath);
+    console.log('Reading file:', imagePath);
     // piexifjs bekerja dengan data string, bukan buffer murni
     const imageDataStr = fs.readFileSync(imagePath).toString('binary');
     
@@ -28,11 +28,11 @@ async function cleanImage(imagePath) {
     // Tulis kembali data yang sudah bersih ke file baru sebagai buffer
     fs.writeFileSync(newPath, Buffer.from(cleanedImageDataStr, 'binary'));
 
-    console.log('✅ Sukses! Metadata telah dihapus.');
-    console.log('File baru disimpan di:', newPath);
+    console.log('✅ Success! Metadata has been removed.');
+    console.log('New file saved at:', newPath);
 
   } catch (error) {
-    console.error('Terjadi kesalahan:', error.message);
+    console.error('An error occurred:', error.message);
   }
 }
 
